@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\games;
+use App\Models\Games;
 use App\Http\Requests\StoregamesRequest;
 use App\Http\Requests\UpdategamesRequest;
 
-class GamesController extends Controller
-{
+class GamesController extends Controller {
     /**
      * Display a listing of the resource.
      *
@@ -32,10 +31,10 @@ class GamesController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\games  $games
+     * @param  \App\Models\Games  $games
      * @return \Illuminate\Http\Response
      */
-    public function show(games $games)
+    public function show(Games $games)
     {
         //
     }
@@ -44,10 +43,10 @@ class GamesController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdategamesRequest  $request
-     * @param  \App\Models\games  $games
+     * @param  \App\Models\Games  $games
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdategamesRequest $request, games $games)
+    public function update(UpdategamesRequest $request, Games $games)
     {
         //
     }
@@ -55,10 +54,10 @@ class GamesController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\games  $games
+     * @param  \App\Models\Games  $games
      * @return \Illuminate\Http\Response
      */
-    public function destroy(games $games)
+    public function destroy(Games $games)
     {
         //
     }

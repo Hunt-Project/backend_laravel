@@ -12,16 +12,16 @@ return new class extends Migration
      * @return void
      */
     public function up() {
-        Schema::create('nations', function (Blueprint $table) {
+        Schema::create('nations', function(Blueprint $table) {
             $table->id();
-            $table->string('nome');
+            $table->string('name');
         });
 
-        Schema::create('cities', function (Blueprint $table) {
+        Schema::create('cities', function(Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->unsignedBigInteger('nation_id');
             $table->foreign('nation_id')->references('id')->on('nations');
-            $table->string('name');
         });
     }
 
