@@ -21,6 +21,8 @@ class AuthController extends Controller {
        ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
+        
+        $user->sendEmailVerificationNotification();
 
         return response()->json([
             'result'=>true,
@@ -68,5 +70,12 @@ class AuthController extends Controller {
 
     public function me(Request $request) {
         return $request->user();
+    }
+
+    public function state(Request $request) {
+        return response()->json([
+            'result'=>true,
+            'message' => 'OK'
+        ]);
     }
 }
